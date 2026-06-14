@@ -8,7 +8,7 @@ any call to a `@RegisterRestClient` interface fails with `IllegalStateException:
 This is a 3-module Gradle project mirroring the reporter's multi-module setup:
 
 - **`security`** — library module with `quarkus-security`, `quarkus-rest-client-jackson` (mirrors `security-quarkus` module)
-- **`rest-client`** — library module with `quarkus-rest-client-jackson`, depends on `:security` (mirrors `kratos-client` module)
+- **`rest-client`** — library module with `quarkus-rest-client-jackson`, depends on `:security`
 - **`app`** — final Quarkus application, depends on `:rest-client`
 
 Both `:security` and `:rest-client` apply the `io.quarkus` plugin (for Jandex indexing / code generation) but disable `quarkusBuild` and `quarkusAppPartsBuild` — they are library modules.
